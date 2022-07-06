@@ -2,12 +2,12 @@ const webdriver = require("selenium-webdriver");
 const { Builder, By } = require("selenium-webdriver");
 const script = require("jest");
 
-describe("Initial test", () => {
+describe.skip("Initial test", () => {
   let driver = new Builder().forBrowser("chrome").build();
 
-  afterAll(async () => {
-    await driver.quit();
-  }, 15000);
+  afterAll(() => {
+    return driver.quit();
+  });
 
   test("Search selenium on google", async () => {
     await driver.get("https://www.google.com");
