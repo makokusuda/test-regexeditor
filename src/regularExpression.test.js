@@ -13,7 +13,7 @@ describe("Regular expression", () => {
   });
 
   afterAll(() => {
-    return driver.quit();
+    driver.quit();
   });
 
   test("can input text", async () => {

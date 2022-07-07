@@ -13,7 +13,7 @@ describe("Test string", () => {
   });
 
   afterAll(() => {
-    return driver.quit();
+    driver.quit();
   });
 
   test("can input text", async () => {

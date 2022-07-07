@@ -1,5 +1,8 @@
 {
   "name": "test-regexeditor",
+  "jest": {
+    "testTimeout": 50000
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

@@ -13,7 +13,7 @@ describe("Function options", () => {
   });
 
   afterAll(() => {
-    return driver.quit();
+    driver.quit();
   });
 
   test("can select substitution", async () => {
