@@ -10,6 +10,8 @@ const PATH = {
     "//*[@aria-label='insert your regular expression here']",
   testStringInput:
     "//*[@class='CodeMirror cm-s-default CodeMirror-wrap CodeMirror-empty']",
+  testStringDisplay:
+    "//*[@class='Pk2Mn CodeMirror-show-whitespace']//span[@role='presentation']",
   // Substitution
   substitutionTitle: "//*[@class='dYInr JOzNE z2wCE llpmv']//*[@class='JOzNE']",
 
