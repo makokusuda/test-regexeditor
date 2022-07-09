@@ -18,6 +18,9 @@ const PATH = {
   equivalentCharacter: "(//*[@class='T0laQ']/span)",
   // Match Information
   matchedString: "(//*[@class='amvtn']/span)",
+  // Quick reference
+  referenceItem: "(//*[@class='WLU1r BcuOd VZGjx']/div[@class='Lta24'])",
+  referenceDescription: "//*[@class='vqMnN']/div",
 };
 
 module.exports = PATH;

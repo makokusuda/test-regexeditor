@@ -1,6 +1,7 @@
 const { Builder, By, until } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 const service = new chrome.ServiceBuilder("./chromedriver");
+const PATH = require("../path");
 
 describe("Quick reference card", () => {
   let driver;
@@ -17,23 +18,19 @@ describe("Quick reference card", () => {
   });
 
   test("should display reference", async () => {
-    await driver.get("https://regex101.com/");
+    await driver.get(PATH.index);
 
-    // Click first reference
-    await driver
-      .findElement(
-        By.xpath("(//*[@class='WLU1r BcuOd VZGjx']/div[@class='Lta24'])[1]")
-      )
-      .click();
+    // Click the top reference
+    await driver.findElement(By.xpath(`${PATH.referenceItem}[1]`)).click();
 
     // Wait until description card displays
     await driver.wait(
-      until.elementLocated(By.xpath("//*[@class='vqMnN']/div")),
+      until.elementLocated(By.xpath(PATH.referenceDescription)),
       10000
     );
 
     const reference = await driver
-      .findElement(By.xpath("//*[@class='vqMnN']/div"))
+      .findElement(By.xpath(PATH.referenceDescription))
       .getAttribute("innerHTML");
 
     // Reference should be displayed
